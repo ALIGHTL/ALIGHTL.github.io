@@ -1,0 +1,20 @@
+a=input()
+d=[]
+e=[]
+for i in a:
+    d.append(int(i))
+b=set(d)
+c=list(b)
+c.sort()
+for i in d:
+    for j in range(len(c)):
+        if i == c[j]:
+            e.append(len(c)-j-1)
+print("int[] arr = new int[]{",end='')
+for i in range(len(c)-1):
+    print(c[len(c)-i-1],end=',')
+print("%d};"%c[0])
+print("int[] index = new int[]{",end='')
+for i in range(len(e)-1):
+    print(e[i],end=',')
+print("%d};"%e[10])
