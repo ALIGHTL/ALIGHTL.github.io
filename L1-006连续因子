@@ -1,0 +1,27 @@
+x=int(input())
+a=[]
+max=0
+for i in range(2,x+1):
+    if x%i==0:
+        a.append(i)
+for i in a:
+    m=0
+    for j in range(x+1):
+        if i+j in a:
+            m+=1
+        if i+j not in a:
+            break
+    if m>max:
+        y=i
+        max=m
+if max!=0:
+    print(max)
+    for i in range(max):
+        print(y+i,end='')
+        if i!=max-1:
+            print("*",end='')
+        else:
+            print('')
+else:
+    print("1")
+    print(x)
